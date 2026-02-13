@@ -6,12 +6,8 @@
   },
   "routes": [
     {
-      "src": "/",
-      "destination": "/"
-    },
-    {
       "src": "/(.*)",
-      "destination": "/index.html"
+      "dest": "/index.html"
     }
   ]
 }
