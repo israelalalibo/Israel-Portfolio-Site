@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ExternalLink, Github, ShoppingCart, TrendingUp, Music, Building2 } from 'lucide-react';
+import { ExternalLink, Github, ShoppingCart, TrendingUp, Music } from 'lucide-react';
 
 interface Project {
   name: string;
