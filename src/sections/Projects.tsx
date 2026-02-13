@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ExternalLink, Github, ShoppingCart, TrendingUp, Music } from 'lucide-react';
+import { ExternalLink, Github, ShoppingCart, TrendingUp, Music, Palette } from 'lucide-react';
 
 interface Project {
   name: string;
@@ -58,6 +58,15 @@ const Projects = () => {
       githubUrl: 'https://github.com/israelalalibo/AlbumReview',
       icon: <Music className="w-6 h-6" />,
       color: 'camel',
+    },
+    {
+      name: 'Satellite Group – E-Commerce Platform',
+      description: 'Production-ready e-commerce platform for a premium printing and branding company in Nigeria. Features multi-step checkout with Paystack payment integration, shopping cart with localStorage persistence, user authentication with account dashboard, design upload functionality with file validation, admin dashboard foundation, and Nigerian market optimizations including local pricing in Naira and WhatsApp integration.',
+      techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Paystack API', 'Context API', 'Framer Motion'],
+      githubUrl: 'https://github.com/israelalalibo/TheSatelliteGroup',
+      liveUrl: 'https://the-satellite-group.vercel.app',
+      icon: <Palette className="w-6 h-6" />,
+      color: 'navy',
     },
   ];
 
