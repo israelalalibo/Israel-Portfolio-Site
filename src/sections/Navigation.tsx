@@ -67,15 +67,12 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="/resume.pdf"
+              href="/Israel_Alalibo_CV.docx"
+              download="Israel_Alalibo_CV.docx"
               className="inline-flex items-center gap-2 btn-primary"
-              onClick={(e) => {
-                e.preventDefault();
-                alert('Resume download coming soon!');
-              }}
             >
               <Download className="w-4 h-4" />
-              Download Resume
+              Download CV
             </a>
           </div>
 
@@ -110,15 +107,12 @@ const Navigation = () => {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href="/Israel_Alalibo_CV.docx"
+            download="Israel_Alalibo_CV.docx"
             className="inline-flex items-center gap-2 btn-primary mt-4"
-            onClick={(e) => {
-              e.preventDefault();
-              alert('Resume download coming soon!');
-            }}
           >
             <Download className="w-4 h-4" />
-            Download Resume
+            Download CV
           </a>
         </div>
       </div>

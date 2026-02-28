@@ -44,13 +44,13 @@ const Skills = () => {
     {
       name: 'Backend & Enterprise',
       icon: <Server className="w-6 h-6" />,
-      skills: ['C# .NET', 'ASP.NET Core', 'REST APIs', 'Entity Framework', 'n-tier Architecture', 'Python'],
+      skills: ['C# .NET', 'ASP.NET Core', 'REST APIs', 'Node.js', 'PHP', 'Entity Framework', 'n-tier Architecture', 'Python'],
       color: 'navy',
     },
     {
       name: 'Databases & Data',
       icon: <Database className="w-6 h-6" />,
-      skills: ['SQL Server', 'PostgreSQL', 'MySQL', 'Query Optimization', 'Stored Procedures', 'Schema Design'],
+      skills: ['SQL Server', 'PostgreSQL', 'MySQL', 'Query Optimization', 'Stored Procedures', 'Schema Design', 'Supabase (BaaS)'],
       color: 'camel',
     },
     {
