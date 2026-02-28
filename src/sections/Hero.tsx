@@ -16,8 +16,8 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToProjects = () => {
-    const element = document.querySelector('#projects');
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -54,7 +54,7 @@ const Hero = () => {
                 className="text-xl sm:text-2xl text-charcoal font-medium opacity-0 animate-fade-in-up"
                 style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
               >
-                Full Stack Engineer | C# .NET
+                Full Stack Engineer | C# .NET | Java | PHP | SQL
               </p>
 
               {/* Description */}
@@ -73,7 +73,7 @@ const Hero = () => {
                 style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}
               >
                 <button
-                  onClick={scrollToProjects}
+                  onClick={() => scrollToSection('#projects')}
                   className="inline-flex items-center gap-2 btn-primary"
                 >
                   View My Work
@@ -95,14 +95,20 @@ const Hero = () => {
                 className="flex flex-wrap gap-8 pt-8 opacity-0 animate-fade-in-up"
                 style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
               >
-                <div>
+                <button
+                  onClick={() => scrollToSection('#skills')}
+                  className="text-left hover:scale-105 transition-transform cursor-pointer"
+                >
                   <p className="text-3xl font-bold text-navy">15+</p>
                   <p className="text-sm text-gray-500">Technologies</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-navy">3+</p>
+                </button>
+                <button
+                  onClick={() => scrollToSection('#projects')}
+                  className="text-left hover:scale-105 transition-transform cursor-pointer"
+                >
+                  <p className="text-3xl font-bold text-navy">5+</p>
                   <p className="text-sm text-gray-500">Major Projects</p>
-                </div>
+                </button>
                 <div>
                   <p className="text-3xl font-bold text-navy">1.5+</p>
                   <p className="text-sm text-gray-500">Years Professional</p>

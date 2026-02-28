@@ -135,14 +135,30 @@ const About = () => {
 
             {/* Quick Facts */}
             <div className="grid grid-cols-2 gap-4 reveal">
-              <div className="bg-navy rounded-xl p-5 text-white">
+              <button
+                onClick={() => {
+                  const element = document.querySelector('#skills');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-navy rounded-xl p-5 text-white text-left hover:bg-navy-dark transition-colors cursor-pointer"
+              >
                 <p className="text-3xl font-bold">15+</p>
                 <p className="text-white text-sm mt-1 font-semibold">Technologies</p>
-              </div>
-              <div className="bg-camel rounded-xl p-5 text-white">
-                <p className="text-3xl font-bold">3</p>
+              </button>
+              <button
+                onClick={() => {
+                  const element = document.querySelector('#projects');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-camel rounded-xl p-5 text-white text-left hover:bg-camel-dark transition-colors cursor-pointer"
+              >
+                <p className="text-3xl font-bold">5</p>
                 <p className="text-white text-sm mt-1 font-semibold">Major Projects</p>
-              </div>
+              </button>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ExternalLink, Github, ShoppingCart, TrendingUp, Music, Palette } from 'lucide-react';
+import { ExternalLink, Github, ShoppingCart, TrendingUp, Music, Palette, User } from 'lucide-react';
 
 interface Project {
   name: string;
@@ -67,6 +67,15 @@ const Projects = () => {
       liveUrl: 'https://the-satellite-group.vercel.app',
       icon: <Palette className="w-6 h-6" />,
       color: 'navy',
+    },
+    {
+      name: 'Mia Bassey – Personal Brand & Portfolio',
+      description: 'Production-ready portfolio website for a professional contortionist and certified stretch coach. Features a video-first hero section with full-bleed background video, filterable masonry media gallery with video-on-hover previews and lightbox modal, WhatsApp contact integration with dynamic URL builder, animated marquee ticker, and a custom dark-mode design system with bespoke color tokens and typographic pairing.',
+      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+      githubUrl: 'https://github.com/israelalalibo/MiaBassey',
+      liveUrl: 'https://mia-bassey.vercel.app',
+      icon: <User className="w-6 h-6" />,
+      color: 'camel',
     },
   ];
 
