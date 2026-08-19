@@ -132,10 +132,10 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-navy text-lg">Location</h3>
-                  <p className="text-charcoal mt-1">Salford, Greater Manchester, UK</p>
+                  <p className="text-charcoal mt-1">Manchester, UK</p>
                   <p className="text-gray-500 text-sm">Available for office & remote roles</p>
                   <p className="text-gray-500 text-sm">
-                    Right to work in the UK, no sponsorship required
+                    Full Right to work in the UK, may require sponsorship in future
                   </p>
                 </div>
               </div>
