@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Mail, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -69,9 +69,9 @@ const Contact = () => {
               <p className="text-camel font-semibold text-lg mb-2">Get in Touch</p>
               <h2 className="text-4xl font-bold">Let's Connect</h2>
               <p className="text-gray-300 mt-4 leading-relaxed">
-                Always open to discussing new projects and opportunities. Whether you're 
-                interested in collaborating on enterprise applications, need technical guidance, 
-                or just want to discuss software engineering best practices, I'd love to hear from you.
+                Always open to discussing new projects and opportunities, whether that is an
+                engineering role, freelance client work, or a conversation about building with AI
+                tooling in a production codebase. I read every message and reply.
               </p>
             </div>
 
@@ -94,11 +94,29 @@ const Contact = () => {
 
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-white/10 rounded-lg">
+                  <Phone className="w-5 h-5 text-camel" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">Phone</p>
+                  <a
+                    href="tel:+447752428706"
+                    className="text-white hover:text-camel transition-colors"
+                  >
+                    07752428706
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-white/10 rounded-lg">
                   <MapPin className="w-5 h-5 text-camel" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Location</p>
-                  <p className="text-white">Manchester, United Kingdom</p>
+                  <p className="text-white">Salford, Greater Manchester, UK</p>
+                  <p className="text-sm text-gray-400">
+                    Right to work in the UK, no sponsorship required
+                  </p>
                 </div>
               </div>
             </div>

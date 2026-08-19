@@ -17,6 +17,7 @@ const Navigation = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
@@ -67,8 +68,8 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a
-              href="/Israel_Alalibo_CV.docx"
-              download="Israel_Alalibo_CV.docx"
+              href="/Israel_Karibo_Alalibo_CV.docx"
+              download="Israel_Karibo_Alalibo_CV.docx"
               className="inline-flex items-center gap-2 btn-primary"
             >
               <Download className="w-4 h-4" />
@@ -107,8 +108,8 @@ const Navigation = () => {
             </a>
           ))}
           <a
-            href="/Israel_Alalibo_CV.docx"
-            download="Israel_Alalibo_CV.docx"
+            href="/Israel_Karibo_Alalibo_CV.docx"
+            download="Israel_Karibo_Alalibo_CV.docx"
             className="inline-flex items-center gap-2 btn-primary mt-4"
           >
             <Download className="w-4 h-4" />

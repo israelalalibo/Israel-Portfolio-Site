@@ -1,11 +1,22 @@
 import { useEffect, useRef } from 'react';
-import { ExternalLink, Github, ShoppingCart, TrendingUp, Music, Palette, User } from 'lucide-react';
+import {
+  ExternalLink,
+  Github,
+  ShoppingBag,
+  ShoppingCart,
+  TrendingUp,
+  Music,
+  Palette,
+  User,
+} from 'lucide-react';
 
 interface Project {
   name: string;
+  year: string;
+  label: string;
   description: string;
   techStack: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   icon: React.ReactNode;
   color: string;
@@ -35,46 +46,84 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      name: 'Hyperion – Automated Trading System',
-      description: 'A fully automated trading system implementing the ICT 2022 methodology for forex and indices markets. The system analyzes real-time market data, detects complex patterns, executes trades, and manages risk dynamically – operating autonomously in live financial markets. Demonstrates ability to build complex, reliable systems in financial domain with strong architectural thinking.',
-      techStack: ['Python', 'MetaTrader 5 API', 'Algorithmic Trading', 'YAML Configuration'],
-      githubUrl: 'https://github.com/israelalalibo/Hyperion',
-      icon: <TrendingUp className="w-6 h-6" />,
+      name: 'Vestige, Full Stack Commerce Platform',
+      year: '2026',
+      label: 'Solo build',
+      description:
+        'A commerce platform designed and built solo, where the money handling is the interesting part. Stripe webhooks are the source of truth rather than the client redirect, event processing is idempotent so retries are safe, prices are recomputed server side so client values are never trusted, local state is reconciled against the payment provider, and every state transition writes an audit trail. Also covers NextAuth with credentials and Google OAuth, JWT, role based access control, per variant inventory, promotional codes, Zod validation, and an admin dashboard with KPI charts and CSV export.',
+      techStack: [
+        'Next.js 14',
+        'React',
+        'TypeScript',
+        'PostgreSQL',
+        'Prisma',
+        'Node.js',
+        'Stripe',
+        'NextAuth',
+        'Zod',
+        'Recharts',
+      ],
+      githubUrl: 'https://github.com/israelalalibo/Vestige',
+      liveUrl: 'https://vestige-delta.vercel.app',
+      icon: <ShoppingBag className="w-6 h-6" />,
       color: 'navy',
     },
     {
-      name: 'StudentHub – Full Stack Web Platform',
-      description: 'Production web platform with MVC architecture, database integration, payment processing, and automated deployment. Features PostgreSQL integration, Stripe payment processing for secure financial transactions, load testing with Locust for performance validation, and CI/CD deployment on Vercel with automated pipelines.',
-      techStack: ['Node.js', 'Express.js', 'PostgreSQL', 'Stripe API', 'CI/CD', 'Vercel'],
-      githubUrl: 'https://github.com/israelalalibo/StudentHub',
-      liveUrl: 'https://student-hub-beige-pi.vercel.app',
-      icon: <ShoppingCart className="w-6 h-6" />,
-      color: 'camel',
-    },
-    {
-      name: 'AlbumReview – Secure Web Application',
-      description: 'Web application demonstrating security-first development practices and clean, maintainable code. Features parameterized SQL queries preventing injection vulnerabilities, bcrypt password hashing, secure session management, Docker Compose for consistent development environments, and clean architecture with focus on maintainability.',
-      techStack: ['PHP', 'MySQL', 'JavaScript', 'Docker', 'Security Best Practices'],
-      githubUrl: 'https://github.com/israelalalibo/AlbumReview',
-      icon: <Music className="w-6 h-6" />,
-      color: 'camel',
-    },
-    {
-      name: 'Satellite Group – E-Commerce Platform',
-      description: 'Production-ready e-commerce platform for a premium printing and branding company in Nigeria. Features multi-step checkout with Paystack payment integration, shopping cart with localStorage persistence, user authentication with account dashboard, design upload functionality with file validation, admin dashboard foundation, and Nigerian market optimizations including local pricing in Naira and WhatsApp integration.',
+      name: 'Satellite Group, E-Commerce Platform',
+      year: '2026',
+      label: 'Client project',
+      description:
+        'Production e-commerce platform for a premium printing and branding company in Nigeria. Features multi-step checkout with Paystack payment integration, shopping cart with localStorage persistence, user authentication with account dashboard, design upload with file validation, admin dashboard foundation, and Nigerian market work including local pricing in Naira and WhatsApp integration. Paystack was chosen deliberately over Stripe because the client\'s customers are in Nigeria and it is the provider they trust.',
       techStack: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Paystack API', 'Context API', 'Framer Motion'],
       githubUrl: 'https://github.com/israelalalibo/TheSatelliteGroup',
       liveUrl: 'https://the-satellite-group.vercel.app',
       icon: <Palette className="w-6 h-6" />,
+      color: 'camel',
+    },
+    {
+      name: 'Mia Bassey, Personal Brand & Portfolio',
+      year: '2026',
+      label: 'Client project',
+      description:
+        'Production portfolio website for a professional contortionist and certified stretch coach. Features a video first hero section with full bleed background video, a filterable masonry media gallery with video on hover previews and a lightbox modal, WhatsApp contact integration with a dynamic URL builder, an animated marquee ticker, and a bespoke dark mode design system with custom colour tokens and typographic pairing. Built mobile first.',
+      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+      githubUrl: 'https://github.com/israelalalibo/mia-bassey-portfolio',
+      liveUrl: 'https://mia-bassey-portfolio.vercel.app',
+      icon: <User className="w-6 h-6" />,
       color: 'navy',
     },
     {
-      name: 'Mia Bassey – Personal Brand & Portfolio',
-      description: 'Production-ready portfolio website for a professional contortionist and certified stretch coach. Features a video-first hero section with full-bleed background video, filterable masonry media gallery with video-on-hover previews and lightbox modal, WhatsApp contact integration with dynamic URL builder, animated marquee ticker, and a custom dark-mode design system with bespoke color tokens and typographic pairing.',
-      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
-      githubUrl: 'https://github.com/israelalalibo/MiaBassey',
-      liveUrl: 'https://mia-bassey-portfolio.vercel.app/',
-      icon: <User className="w-6 h-6" />,
+      name: 'Hyperion, Autonomous Trading and Automation System',
+      year: '2025',
+      label: 'Solo build',
+      description:
+        'An event driven automation system in Python that runs unattended around the clock. It integrates MetaTrader5 and REST APIs, applies rule based decision logic with dynamic risk management, and handles order routing, position management and reconciliation. Built for fault tolerance: retry logic, graceful degradation, health checks, automated recovery, comprehensive logging, Telegram alerting and a YAML config driven architecture. The trading logic implements the ICT 2022 methodology across forex and indices, detecting liquidity sweeps, market structure shifts and fair value gaps. It grew out of my own independent financial markets research.',
+      techStack: ['Python', 'MetaTrader5 API', 'REST APIs', 'Event Driven Architecture', 'YAML Configuration'],
+      githubUrl: 'https://github.com/israelalalibo/Hyperion',
+      icon: <TrendingUp className="w-6 h-6" />,
+      color: 'camel',
+    },
+    {
+      name: 'StudentHub, Full Stack Web Platform',
+      year: '2025',
+      label: 'Solo build',
+      description:
+        'Web platform with MVC architecture, database integration, payment processing and automated deployment. Built on Node.js and Express with a vanilla JavaScript front end, PostgreSQL for persistence, Stripe for payments, and search and filtering across listings. Load tested with Locust to find the point where throughput degraded under concurrent load, then optimised against those measurements rather than by guesswork. Deployed through CI/CD on Vercel.',
+      techStack: ['Node.js', 'Express.js', 'PostgreSQL', 'Vanilla JavaScript', 'Stripe API', 'Locust', 'CI/CD'],
+      githubUrl: 'https://github.com/israelalalibo/StudentHub',
+      liveUrl: 'https://student-hub-beige-pi.vercel.app',
+      icon: <ShoppingCart className="w-6 h-6" />,
+      color: 'navy',
+    },
+    {
+      name: 'AlbumReview, Secure Web Application',
+      year: '2025',
+      label: 'Solo build',
+      description:
+        'Built deliberately in a framework I did not know, in order to learn it properly. PHP 8 and Symfony with Twig templating, Doctrine ORM over MySQL, MVC structure, role based access control and applied design patterns, containerised with Docker. Security practices throughout: parameterised queries preventing injection, bcrypt password hashing and secure session management.',
+      techStack: ['PHP 8', 'Symfony', 'Twig', 'Doctrine ORM', 'MySQL', 'Docker', 'RBAC'],
+      githubUrl: 'https://github.com/israelalalibo/AlbumReview',
+      icon: <Music className="w-6 h-6" />,
       color: 'camel',
     },
   ];
@@ -91,8 +140,8 @@ const Projects = () => {
           <p className="text-camel font-semibold text-lg mb-2">Highlights</p>
           <h2 className="text-4xl font-bold text-navy">Featured Projects</h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            A selection of projects demonstrating full-stack development, from automated trading 
-            systems to enterprise applications with focus on clean architecture and reliability.
+            Six projects across commerce, automation and client delivery. Two are paid client work,
+            live in production; the rest I designed and built solo, end to end.
           </p>
         </div>
 
@@ -115,15 +164,17 @@ const Projects = () => {
                     {project.icon}
                   </div>
                   <div className="flex gap-2">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 bg-white rounded-lg text-charcoal hover:text-camel hover:shadow-md transition-all"
-                      aria-label={`View ${project.name} on GitHub`}
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-white rounded-lg text-charcoal hover:text-camel hover:shadow-md transition-all"
+                        aria-label={`View ${project.name} on GitHub`}
+                      >
+                        <Github className="w-5 h-5" />
+                      </a>
+                    )}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
@@ -141,6 +192,18 @@ const Projects = () => {
 
               {/* Card Content */}
               <div className="p-6">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span
+                    className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${
+                      project.color === 'camel'
+                        ? 'bg-camel/15 text-camel-dark'
+                        : 'bg-navy/10 text-navy'
+                    }`}
+                  >
+                    {project.label}
+                  </span>
+                  <span className="text-sm font-medium text-gray-500">{project.year}</span>
+                </div>
                 <h3 className="text-xl font-bold text-navy mb-3">{project.name}</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
                   {project.description}
@@ -160,19 +223,21 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium transition-all ${
-                      project.color === 'camel'
-                        ? 'bg-camel text-white hover:bg-camel-dark'
-                        : 'bg-navy text-white hover:bg-navy-dark'
-                    }`}
-                  >
-                    <Github className="w-4 h-4" />
-                    View Code
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium transition-all ${
+                        project.color === 'camel'
+                          ? 'bg-camel text-white hover:bg-camel-dark'
+                          : 'bg-navy text-white hover:bg-navy-dark'
+                      }`}
+                    >
+                      <Github className="w-4 h-4" />
+                      View Code
+                    </a>
+                  )}
                   {project.liveUrl ? (
                     <a
                       href={project.liveUrl}

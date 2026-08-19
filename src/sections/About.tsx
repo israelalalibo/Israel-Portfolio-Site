@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Github, Linkedin, GraduationCap, MapPin, Mail } from 'lucide-react';
+import { Github, Linkedin, GraduationCap, MapPin, Mail, Users } from 'lucide-react';
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -40,21 +40,33 @@ const About = () => {
 
             <div className="space-y-4 text-gray-600 leading-relaxed reveal">
               <p>
-                Full Stack Engineer with commercial C# .NET experience building enterprise applications 
-                in high-volume, high-availability environments. Currently at Dematic developing systems 
-                that process thousands of transactions daily for major retailers like Ocado, Amazon, and Tesco.
+                Software Engineer with two years of commercial experience, currently at Dematic
+                (KION Group) building real time, event based warehouse and supply chain automation
+                systems for Ocado, Amazon and Tesco. The work covers C# and C++ services, WMS and ERP
+                integrations, and customer facing terminal software that drives physical material
+                handling hardware over low level protocols.
               </p>
               <p>
-                I'm passionate about code quality, SOLID principles, and clean architecture. My approach 
-                combines technical excellence with a focus on reliability, maintainability, and delivering 
-                solutions that teams can trust. I practice TDD, conduct thorough code reviews, and collaborate 
-                effectively in Agile teams.
+                I tend to pick up the work nobody has claimed. Security had no clear owner on my team,
+                so I scoped and ran a full audit and cut vulnerabilities by 60 percent. A critical
+                operation was taking 45 seconds, so I profiled it and read the SQL execution plan
+                rather than guessing, and brought it down to 3 seconds. I care about code quality,
+                SOLID principles and clean architecture, practise TDD, review code thoroughly and
+                work in Agile and Scrum teams, and I mentor the junior engineers around me.
               </p>
               <p>
-                Beyond enterprise applications, I've built an automated trading system in Python demonstrating 
-                ability to work across the full stack and deliver complex, reliable solutions. When I'm not coding, 
-                you'll find me exploring new technologies, contributing to continuous improvement, or helping colleagues 
-                overcome technical challenges.
+                I build with AI rather than around it. I use Claude Code and GitHub Copilot daily in
+                production work, and I led their adoption across my engineering team: I trialled the
+                tooling myself first, rolled it out, wrote the standards for how AI generated code
+                gets reviewed before release, coached colleagues through it and measured the effect on
+                delivery speed and code quality. I am currently enrolled in the Anthropic AI Academy.
+              </p>
+              <p>
+                Alongside that I take freelance client work, most recently Satellite Group and Mia
+                Bassey, where clients arrive with a business problem rather than a specification and
+                the scoping is part of the job. My own projects include Vestige, a commerce platform
+                built solo on Next.js and PostgreSQL, and Hyperion, an autonomous trading and
+                automation system in Python that runs unattended around the clock.
               </p>
             </div>
 
@@ -91,9 +103,23 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-navy text-lg">Education</h3>
-                  <p className="text-charcoal mt-1">BSc Software Engineering (Hons)</p>
-                  <p className="text-gray-500 text-sm">University of Salford • 2022-2026</p>
-                  <p className="text-gray-500 text-sm">Predicted First Class</p>
+                  <p className="text-charcoal mt-1">
+                    BSc (Hons) Software Engineering with Professional Experience
+                  </p>
+                  <p className="text-gray-500 text-sm">University of Salford</p>
+                  <p className="text-camel text-sm font-semibold mt-1">
+                    First Class Honours, awarded
+                  </p>
+                  <p className="text-gray-500 text-sm">Graduation ceremony July 2026</p>
+                  <p className="text-gray-500 text-sm mt-3">
+                    Distributed Systems, Database Systems, Networking and Security (Cisco, TCP/IP),
+                    Data Structures and Algorithms, Object Oriented Programming, Web Development,
+                    Software Quality Management.
+                  </p>
+                  <p className="text-gray-500 text-sm mt-3">
+                    Member of the BCS, the British Computer Society. Enrolled in the Anthropic AI
+                    Academy, covering LLM integration, agentic workflows and prompt engineering.
+                  </p>
                 </div>
               </div>
             </div>
@@ -106,8 +132,11 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-navy text-lg">Location</h3>
-                  <p className="text-charcoal mt-1">Manchester, United Kingdom</p>
+                  <p className="text-charcoal mt-1">Salford, Greater Manchester, UK</p>
                   <p className="text-gray-500 text-sm">Available for office & remote roles</p>
+                  <p className="text-gray-500 text-sm">
+                    Right to work in the UK, no sponsorship required
+                  </p>
                 </div>
               </div>
             </div>
@@ -124,11 +153,43 @@ const About = () => {
                     Always open to discussing new projects and opportunities.
                   </p>
                   <a
+                    href="mailto:israelalalibo97@gmail.com"
+                    className="block text-gray-500 text-sm mt-2 hover:text-camel transition-colors"
+                  >
+                    israelalalibo97@gmail.com
+                  </a>
+                  <a
+                    href="tel:+447752428706"
+                    className="block text-gray-500 text-sm hover:text-camel transition-colors"
+                  >
+                    07752428706
+                  </a>
+                  <a
                     href="#contact"
                     className="inline-flex items-center gap-1 text-camel font-medium mt-2 hover:underline"
                   >
                     Send me a message →
                   </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Beyond Work Card */}
+            <div className="bg-white rounded-xl p-6 shadow-card hover-lift reveal">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-navy/10 rounded-lg">
+                  <Users className="w-6 h-6 text-navy" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-navy text-lg">Beyond Work</h3>
+                  <p className="text-charcoal mt-1">Youth Mentor, UCKG HelpCentre, Manchester</p>
+                  <p className="text-gray-500 text-sm">
+                    Leads mentorship programmes supporting young people.
+                  </p>
+                  <p className="text-charcoal mt-3">Independent financial markets research</p>
+                  <p className="text-gray-500 text-sm">
+                    Equity and risk analysis. This is what led to building Hyperion.
+                  </p>
                 </div>
               </div>
             </div>
@@ -156,7 +217,7 @@ const About = () => {
                 }}
                 className="bg-camel rounded-xl p-5 text-white text-left hover:bg-camel-dark transition-colors cursor-pointer"
               >
-                <p className="text-3xl font-bold">5</p>
+                <p className="text-3xl font-bold">6</p>
                 <p className="text-white text-sm mt-1 font-semibold">Major Projects</p>
               </button>
             </div>

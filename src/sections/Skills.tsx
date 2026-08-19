@@ -1,14 +1,17 @@
 import { useEffect, useRef } from 'react';
-import { 
-  Code2, 
-  Server, 
-  Database, 
-  Wrench, 
+import {
+  Code2,
+  Server,
+  Database,
+  Wrench,
   Layout,
   FileCode,
   GitBranch,
   Container,
-  Terminal
+  Terminal,
+  Sparkles,
+  CreditCard,
+  Bot
 } from 'lucide-react';
 
 interface SkillCategory {
@@ -44,35 +47,57 @@ const Skills = () => {
     {
       name: 'Backend & Enterprise',
       icon: <Server className="w-6 h-6" />,
-      skills: ['C# .NET', 'ASP.NET Core', 'REST APIs', 'Node.js', 'PHP', 'Entity Framework', 'n-tier Architecture', 'Python'],
+      skills: ['C#', 'C++', '.NET Core', 'ASP.NET Core', 'REST API Design', 'Node.js', 'Express', 'Python', 'PHP', 'Symfony', 'Entity Framework', 'n-tier Architecture'],
       color: 'navy',
     },
     {
       name: 'Databases & Data',
       icon: <Database className="w-6 h-6" />,
-      skills: ['SQL Server', 'PostgreSQL', 'MySQL', 'Query Optimization', 'Stored Procedures', 'Schema Design', 'Supabase (BaaS)'],
+      skills: ['SQL Server', 'PostgreSQL', 'MySQL', 'Prisma', 'Doctrine ORM', 'Query Optimisation', 'Stored Procedures', 'Schema Design', 'Supabase (BaaS)'],
       color: 'camel',
     },
     {
       name: 'Frontend',
       icon: <Layout className="w-6 h-6" />,
-      skills: ['JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Responsive Design'],
+      skills: ['TypeScript', 'JavaScript (ES6+)', 'React', 'Next.js', 'Tailwind CSS', 'HTML5', 'CSS3', 'Responsive Design'],
       color: 'camel',
     },
     {
-      name: 'DevOps & CI/CD',
+      name: 'Cloud, DevOps & CI/CD',
       icon: <Wrench className="w-6 h-6" />,
-      skills: ['Azure DevOps', 'Git', 'CI/CD Pipelines', 'Docker', 'Automated Testing'],
+      skills: ['Azure', 'Azure DevOps', 'Git', 'CI/CD Pipelines', 'Docker', 'Automated Testing', 'Locust'],
       color: 'navy',
+    },
+    {
+      name: 'AI Engineering',
+      icon: <Sparkles className="w-6 h-6" />,
+      skills: ['Claude Code', 'GitHub Copilot', 'LLM API Integration', 'Prompt Engineering', 'Agentic Workflows', 'AI Code Review Standards'],
+      color: 'navy',
+    },
+    {
+      name: 'Payments & Integrations',
+      icon: <CreditCard className="w-6 h-6" />,
+      skills: ['Stripe', 'Paystack', 'Webhook Processing', 'Zod Validation', 'WMS & ERP Integration', 'Low Level Hardware Protocols'],
+      color: 'camel',
     },
   ];
 
-  const languageSkills = [
-    { name: 'C#', level: 95 },
-    { name: 'SQL', level: 90 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'Python', level: 85 },
+  const skillTiers = [
+    {
+      name: 'Commercial',
+      note: 'Used daily in paid production work at Dematic',
+      skills: ['C#', 'C++', '.NET Core', 'SQL Server', 'Azure', 'Azure DevOps', 'Docker', 'CI/CD', 'Git', 'Agile & Scrum'],
+    },
+    {
+      name: 'Projects & Freelance',
+      note: 'Used to build and ship real products for real users',
+      skills: ['Python', 'TypeScript', 'JavaScript (ES6+)', 'React', 'Next.js', 'Node.js', 'Express', 'PostgreSQL', 'MySQL', 'PHP', 'Symfony', 'Prisma', 'Tailwind CSS', 'Stripe', 'Paystack', 'Zod', 'Locust', 'REST API Design', 'HTML5', 'CSS3', 'Claude Code', 'GitHub Copilot', 'LLM API Integration', 'Prompt Engineering'],
+    },
+    {
+      name: 'Familiar',
+      note: 'Worked with, still building depth. Listed honestly, not as strengths',
+      skills: ['AWS', 'GCP', 'Kubernetes', 'Terraform', 'MongoDB', 'DynamoDB', 'Go', 'GraphQL', 'Kafka', 'Redis', 'FastAPI', 'Angular', 'React Native'],
+    },
   ];
 
   return (
@@ -87,8 +112,8 @@ const Skills = () => {
           <p className="text-camel font-semibold text-lg mb-2">What I Do</p>
           <h2 className="text-4xl font-bold text-navy">Technical Skills</h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Enterprise-focused expertise in C# .NET, SQL Server, and cloud infrastructure. 
-            Committed to SOLID principles, clean code, and building reliable systems.
+            C#, C++, .NET Core and SQL Server in commercial production work, TypeScript and Next.js in
+            client delivery, and AI tooling in both. Grouped below by how deep each one actually goes.
           </p>
         </div>
 
@@ -122,54 +147,48 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Programming Languages */}
+        {/* Honest depth groupings */}
         <div className="bg-navy rounded-2xl p-8 text-white reveal">
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center gap-3 mb-3">
             <div className="p-2.5 bg-white/10 rounded-lg">
               <Code2 className="w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-semibold">Programming Languages</h3>
+            <h3 className="text-2xl font-semibold">How deep each one goes</h3>
           </div>
+          <p className="text-gray-300 mb-8 max-w-2xl">
+            Grouped by how I actually use them rather than by a self awarded score.
+          </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {languageSkills.map((lang) => (
-              <div key={lang.name} className="text-center">
-                <div className="relative w-20 h-20 mx-auto mb-3">
-                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
-                    <path
-                      className="text-white/10"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                    />
-                    <path
-                      className="text-camel"
-                      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeDasharray={`${lang.level}, 100`}
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-lg font-bold">{lang.level}%</span>
-                  </div>
+          <div className="space-y-8">
+            {skillTiers.map((tier) => (
+              <div key={tier.name}>
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
+                  <h4 className="text-lg font-semibold text-camel">{tier.name}</h4>
+                  <p className="text-sm text-gray-400">{tier.note}</p>
                 </div>
-                <p className="font-medium">{lang.name}</p>
+                <div className="flex flex-wrap gap-2">
+                  {tier.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1 text-sm font-medium bg-white/10 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Additional Tools */}
-        <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 reveal">
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-5 gap-4 reveal">
           {[
             { icon: <GitBranch className="w-5 h-5" />, name: 'Azure DevOps' },
             { icon: <Container className="w-5 h-5" />, name: 'Docker' },
             { icon: <Terminal className="w-5 h-5" />, name: 'Agile/Scrum' },
             { icon: <FileCode className="w-5 h-5" />, name: 'TDD' },
+            { icon: <Bot className="w-5 h-5" />, name: 'Claude Code' },
           ].map((tool) => (
             <div
               key={tool.name}

@@ -54,7 +54,7 @@ const Hero = () => {
                 className="text-xl sm:text-2xl text-charcoal font-medium opacity-0 animate-fade-in-up"
                 style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
               >
-                Full Stack Engineer | C# .NET | Java | PHP | SQL
+                Software Engineer | C# | C++ | .NET Core | SQL Server | Azure
               </p>
 
               {/* Description */}
@@ -62,9 +62,11 @@ const Hero = () => {
                 className="text-lg text-gray-600 leading-relaxed max-w-xl opacity-0 animate-fade-in-up"
                 style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
               >
-                Software Engineer at Dematic building enterprise applications that process thousands of 
-                transactions daily. Passionate about SOLID principles, clean architecture, and delivering 
-                reliable software in high-availability environments.
+                Software Engineer at Dematic (KION Group), building real time, event based warehouse
+                and supply chain automation for Amazon, Tesco and Ocado. Two years of commercial
+                experience across C#, C++, .NET Core, SQL Server and Azure, alongside freelance
+                delivery in React, Next.js and TypeScript. I use Claude Code and GitHub Copilot daily
+                and led their adoption across my engineering team.
               </p>
 
               {/* CTA Buttons */}
@@ -92,9 +94,30 @@ const Hero = () => {
 
               {/* Quick Stats */}
               <div
-                className="flex flex-wrap gap-8 pt-8 opacity-0 animate-fade-in-up"
+                className="flex flex-wrap gap-x-8 gap-y-6 pt-8 opacity-0 animate-fade-in-up"
                 style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
               >
+                <button
+                  onClick={() => scrollToSection('#experience')}
+                  className="text-left hover:scale-105 transition-transform cursor-pointer"
+                >
+                  <p className="text-3xl font-bold text-camel">93%</p>
+                  <p className="text-sm text-gray-500">Latency Cut</p>
+                </button>
+                <button
+                  onClick={() => scrollToSection('#experience')}
+                  className="text-left hover:scale-105 transition-transform cursor-pointer"
+                >
+                  <p className="text-3xl font-bold text-camel">60%</p>
+                  <p className="text-sm text-gray-500">Fewer Vulnerabilities</p>
+                </button>
+                <button
+                  onClick={() => scrollToSection('#experience')}
+                  className="text-left hover:scale-105 transition-transform cursor-pointer"
+                >
+                  <p className="text-3xl font-bold text-navy">2+</p>
+                  <p className="text-sm text-gray-500">Years Commercial</p>
+                </button>
                 <button
                   onClick={() => scrollToSection('#skills')}
                   className="text-left hover:scale-105 transition-transform cursor-pointer"
@@ -106,13 +129,9 @@ const Hero = () => {
                   onClick={() => scrollToSection('#projects')}
                   className="text-left hover:scale-105 transition-transform cursor-pointer"
                 >
-                  <p className="text-3xl font-bold text-navy">5+</p>
+                  <p className="text-3xl font-bold text-navy">6</p>
                   <p className="text-sm text-gray-500">Major Projects</p>
                 </button>
-                <div>
-                  <p className="text-3xl font-bold text-navy">1.5+</p>
-                  <p className="text-sm text-gray-500">Years Professional</p>
-                </div>
               </div>
             </div>
           </div>
@@ -132,7 +151,7 @@ const Hero = () => {
               <div className="relative w-[280px] h-[380px] sm:w-[320px] sm:h-[440px] lg:w-[380px] lg:h-[520px] rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="/images/israel-macc.jpeg"
-                  alt="Israel Alalibo - Full Stack Engineer"
+                  alt="Israel Karibo Alalibo, Software Engineer"
                   className="w-full h-full object-cover"
                 />
                 
