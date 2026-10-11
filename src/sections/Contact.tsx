@@ -113,9 +113,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Location</p>
-                  <p className="text-white">Salford, Greater Manchester, UK</p>
+                  <p className="text-white">Manchester, UK</p>
                   <p className="text-sm text-gray-400">
-                    Right to work in the UK, no sponsorship required
+                    Right to work in the UK, no sponsorship required currently; may require
+                    sponsorship in future.
                   </p>
                 </div>
               </div>

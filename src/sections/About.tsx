@@ -40,9 +40,9 @@ const About = () => {
 
             <div className="space-y-4 text-gray-600 leading-relaxed reveal">
               <p>
-                Software Engineer with two years of commercial experience, currently at Dematic
-                (KION Group) building real time, event based warehouse and supply chain automation
-                systems for Ocado, Amazon and Tesco. The work covers C# and C++ services, WMS and ERP
+                Software Engineer with two years of commercial experience at Dematic (KION Group),
+                where I built real time, event based warehouse and supply chain automation systems
+                for Ocado, Amazon and Tesco. The work covered C# and C++ services, WMS and ERP
                 integrations, and customer facing terminal software that drives physical material
                 handling hardware over low level protocols.
               </p>
@@ -52,7 +52,7 @@ const About = () => {
                 operation was taking 45 seconds, so I profiled it and read the SQL execution plan
                 rather than guessing, and brought it down to 3 seconds. I care about code quality,
                 SOLID principles and clean architecture, practise TDD, review code thoroughly and
-                work in Agile and Scrum teams, and I mentor the junior engineers around me.
+                work in Agile and Scrum teams, and I mentored the junior engineers around me.
               </p>
               <p>
                 I build with AI rather than around it. I use Claude Code and GitHub Copilot daily in
@@ -111,6 +111,10 @@ const About = () => {
                     First Class Honours, awarded
                   </p>
                   <p className="text-gray-500 text-sm">Graduation ceremony July 2026</p>
+                  <p className="text-gray-500 text-sm">Final Year Project 83, overall 76</p>
+                  <p className="text-charcoal text-sm font-medium mt-1">
+                    £5,000 Academic Excellence Scholarship, University of Salford
+                  </p>
                   <p className="text-gray-500 text-sm mt-3">
                     Distributed Systems, Database Systems, Networking and Security (Cisco, TCP/IP),
                     Data Structures and Algorithms, Object Oriented Programming, Web Development,
@@ -135,7 +139,8 @@ const About = () => {
                   <p className="text-charcoal mt-1">Manchester, UK</p>
                   <p className="text-gray-500 text-sm">Available for office & remote roles</p>
                   <p className="text-gray-500 text-sm">
-                    Full Right to work in the UK, may require sponsorship in future
+                    Right to work in the UK, no sponsorship required currently; may require
+                    sponsorship in future.
                   </p>
                 </div>
               </div>
@@ -186,9 +191,16 @@ const About = () => {
                   <p className="text-gray-500 text-sm">
                     Leads mentorship programmes supporting young people.
                   </p>
-                  <p className="text-charcoal mt-3">Independent financial markets research</p>
+                  <a
+                    href="https://trading-portfolio-alpha.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-charcoal mt-3 underline decoration-camel/50 underline-offset-4 hover:text-camel transition-colors"
+                  >
+                    Funded Trader, Alpha Capital & Alpha Futures, verified payouts
+                  </a>
                   <p className="text-gray-500 text-sm">
-                    Equity and risk analysis. This is what led to building Hyperion.
+                    This is what led to building Hyperion.
                   </p>
                 </div>
               </div>
