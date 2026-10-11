@@ -79,7 +79,7 @@ const Experience = () => {
       icon: <Briefcase className="w-6 h-6" />,
       color: 'camel',
       points: [
-        'Three products delivered and live for real clients, including Satellite Group and Mia Bassey.',
+        'Two products delivered and live for real clients: Satellite Group and Mia Bassey.',
         'React, Next.js, TypeScript, Node.js, Python, PostgreSQL, Stripe, Paystack and Tailwind CSS.',
         'Clients bring a business problem rather than a specification, so scoping and requirements gathering is part of the work.',
       ],
@@ -91,8 +91,9 @@ const Experience = () => {
       icon: <Users className="w-6 h-6" />,
       color: 'navy',
       points: [
-        'Organised monthly technical meetups and workshops for 30 to 50 attendees.',
-        'Facilitated knowledge sharing across a broad technical community.',
+        'Coordinated on-campus coding and e-learning events with 60+ attendees.',
+        'Kept communication flowing between the BCS president and members.',
+        'Facilitated knowledge sharing across the technical community.',
         'Member of the BCS, the British Computer Society.',
       ],
     },
@@ -103,7 +104,7 @@ const Experience = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 reveal">
-          <p className="text-camel font-semibold text-lg mb-2">Where I Work</p>
+          <p className="text-camel font-semibold text-lg mb-2">Where I've Worked</p>
           <h2 className="text-4xl font-bold text-navy">Experience</h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Two years of commercial engineering on production systems that recognisable enterprise
@@ -139,16 +140,18 @@ const Experience = () => {
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-2xl font-bold text-navy">Software Engineer</h3>
                 <span className="text-sm font-medium text-charcoal bg-camel/15 px-3 py-1 rounded-full">
-                  September 2024 to present
+                  September 2024 to September 2026
                 </span>
               </div>
               <p className="text-charcoal font-medium mt-1">
                 Dematic (KION Group), Salford
               </p>
               <p className="text-gray-600 mt-4 leading-relaxed">
-                A permanent commercial engineering role, not a placement or an internship. Dematic
-                builds warehouse and supply chain automation, and the systems I work on run in live
-                production with strict availability requirements.
+                I joined Dematic on a full-time industrial placement from September 2024 to
+                September 2025, my degree's Professional Experience year, then continued part-time
+                alongside my final year until September 2026. Dematic builds warehouse and supply
+                chain automation, and the systems I worked on run in live production with strict
+                availability requirements.
               </p>
               <ul className="mt-5 space-y-3">
                 {dematicResponsibilities.map((item) => (
@@ -171,7 +174,8 @@ const Experience = () => {
             <div className="flex-1">
               <h3 className="text-2xl font-bold">Led AI tooling adoption across the team</h3>
               <p className="text-gray-300 mt-4 leading-relaxed">
-                I use Claude Code and GitHub Copilot daily in commercial production work. Rather than
+                I used Claude Code and GitHub Copilot daily in commercial production work at Dematic.
+                Rather than
                 waiting for a policy, I trialled the tooling on my own work first, then rolled it out
                 across the engineering team: I defined the standards for how AI generated code is
                 reviewed before it reaches release, coached colleagues through adopting it, and
