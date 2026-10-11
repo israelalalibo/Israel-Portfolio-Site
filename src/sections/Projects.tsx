@@ -18,6 +18,7 @@ interface Project {
   techStack: string[];
   githubUrl?: string;
   liveUrl?: string;
+  hideDemo?: boolean;
   icon: React.ReactNode;
   color: string;
 }
@@ -100,6 +101,7 @@ const Projects = () => {
         'An event driven automation system in Python that runs unattended around the clock. It integrates MetaTrader5 and REST APIs, applies rule based decision logic with dynamic risk management, and handles order routing, position management and reconciliation. Built for fault tolerance: retry logic, graceful degradation, health checks, automated recovery, comprehensive logging, Telegram alerting and a YAML config driven architecture. The trading logic implements the ICT 2022 methodology across forex and indices, detecting liquidity sweeps, market structure shifts and fair value gaps. It grew out of my own independent financial markets research.',
       techStack: ['Python', 'MetaTrader5 API', 'REST APIs', 'Event Driven Architecture', 'YAML Configuration'],
       githubUrl: 'https://github.com/israelalalibo/Hyperion',
+      hideDemo: true,
       icon: <TrendingUp className="w-6 h-6" />,
       color: 'camel',
     },
@@ -248,7 +250,7 @@ const Projects = () => {
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
                     </a>
-                  ) : (
+                  ) : !project.hideDemo && (
                     <button
                       disabled
                       className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg font-medium border-2 border-gray-100 text-gray-400 cursor-not-allowed"
