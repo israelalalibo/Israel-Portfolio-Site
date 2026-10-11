@@ -150,11 +150,24 @@ const Hero = () => {
               
               {/* Image container */}
               <div className="relative w-[280px] h-[380px] sm:w-[320px] sm:h-[440px] lg:w-[380px] lg:h-[520px] rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/images/israel-macc.jpeg"
-                  alt="Israel Karibo Alalibo, Software Engineer"
-                  className="w-full h-full object-cover"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet="/images/israel-macc-400.webp 400w, /images/israel-macc-760.webp 760w"
+                    sizes="(min-width: 1024px) 380px, (min-width: 640px) 320px, 280px"
+                  />
+                  <img
+                    src="/images/israel-macc-760.jpg"
+                    srcSet="/images/israel-macc-400.jpg 400w, /images/israel-macc-760.jpg 760w"
+                    sizes="(min-width: 1024px) 380px, (min-width: 640px) 320px, 280px"
+                    width={760}
+                    height={1013}
+                    fetchPriority="high"
+                    decoding="async"
+                    alt="Israel Karibo Alalibo, Software Engineer"
+                    className="w-full h-full object-cover"
+                  />
+                </picture>
                 
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />

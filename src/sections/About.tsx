@@ -238,11 +238,24 @@ const About = () => {
           {/* Right Column - Image */}
           <div className="flex justify-center reveal">
             <div className="relative w-[280px] h-[380px] sm:w-[320px] sm:h-[440px] lg:w-[340px] lg:h-[480px] rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src="/images/israel-teddy.png"
-                alt="Israel Alalibo"
-                className="w-full h-full object-cover"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/images/israel-teddy-400.webp 400w, /images/israel-teddy-720.webp 720w"
+                  sizes="(min-width: 1024px) 340px, (min-width: 640px) 320px, 280px"
+                />
+                <img
+                  src="/images/israel-teddy-720.jpg"
+                  srcSet="/images/israel-teddy-400.jpg 400w, /images/israel-teddy-720.jpg 720w"
+                  sizes="(min-width: 1024px) 340px, (min-width: 640px) 320px, 280px"
+                  width={720}
+                  height={960}
+                  loading="lazy"
+                  decoding="async"
+                  alt="Israel Alalibo sitting in front of a large festive teddy bear display"
+                  className="w-full h-full object-cover"
+                />
+              </picture>
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />
             </div>
