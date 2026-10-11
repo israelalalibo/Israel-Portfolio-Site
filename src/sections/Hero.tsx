@@ -51,10 +51,11 @@ const Hero = () => {
 
               {/* Subheadline */}
               <p
-                className="text-xl sm:text-2xl text-charcoal font-medium opacity-0 animate-fade-in-up"
+                className="text-lg sm:text-xl lg:text-2xl text-charcoal font-medium leading-snug text-balance opacity-0 animate-fade-in-up"
                 style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
               >
-                Software Engineer | C# | C++ | .NET Core | SQL Server | Azure
+                Software Engineer | Full Stack (React, Next.js, TypeScript) | C#/.NET |{' '}
+                <span className="whitespace-nowrap">AI-assisted development</span>
               </p>
 
               {/* Description */}
@@ -62,9 +63,9 @@ const Hero = () => {
                 className="text-lg text-gray-600 leading-relaxed max-w-xl opacity-0 animate-fade-in-up"
                 style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
               >
-                Software Engineer at Dematic (KION Group), building real time, event based warehouse
-                and supply chain automation for Amazon, Tesco and Ocado. Two years of commercial
-                experience across C#, C++, .NET Core, SQL Server and Azure, alongside freelance
+                Software Engineer with two years at Dematic (KION Group), where I built real time,
+                event based warehouse and supply chain automation for Amazon, Tesco and Ocado.
+                Commercial experience across C#, C++, .NET Core, SQL Server and Azure, alongside freelance
                 delivery in React, Next.js and TypeScript. I use Claude Code and GitHub Copilot daily
                 and led their adoption across my engineering team.
               </p>

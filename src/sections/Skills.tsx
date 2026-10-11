@@ -85,7 +85,7 @@ const Skills = () => {
   const skillTiers = [
     {
       name: 'Commercial',
-      note: 'Used daily in paid production work at Dematic',
+      note: 'Used daily in two years of paid production work at Dematic',
       skills: ['C#', 'C++', '.NET Core', 'SQL Server', 'Azure', 'Azure DevOps', 'Docker', 'CI/CD', 'Git', 'Agile & Scrum'],
     },
     {
