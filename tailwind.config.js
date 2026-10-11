@@ -45,9 +45,9 @@ export default {
         },
         // Custom portfolio colors
         camel: {
-          DEFAULT: '#C4956A',
+          DEFAULT: '#8E6136',
           light: '#D4A77A',
-          dark: '#A67B5B',
+          dark: '#744D2B',
         },
         navy: {
           DEFAULT: '#1E3A5F',

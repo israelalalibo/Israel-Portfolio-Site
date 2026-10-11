@@ -81,7 +81,9 @@ const Navigation = () => {
           <button
             className="md:hidden p-2 text-charcoal hover:text-camel transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -90,10 +92,11 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg transition-all duration-300 ${
           isMobileMenuOpen
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 -translate-y-4 pointer-events-none'
+            ? 'opacity-100 translate-y-0 visible'
+            : 'opacity-0 -translate-y-4 pointer-events-none invisible'
         }`}
       >
         <div className="px-4 py-6 space-y-4">

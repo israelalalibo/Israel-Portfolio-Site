@@ -163,7 +163,7 @@ const Skills = () => {
             {skillTiers.map((tier) => (
               <div key={tier.name}>
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
-                  <h4 className="text-lg font-semibold text-camel">{tier.name}</h4>
+                  <h4 className="text-lg font-semibold text-camel-light">{tier.name}</h4>
                   <p className="text-sm text-gray-400">{tier.note}</p>
                 </div>
                 <div className="flex flex-wrap gap-2">

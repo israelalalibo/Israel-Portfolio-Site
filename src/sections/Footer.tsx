@@ -29,7 +29,7 @@ const Footer = () => {
             <a
               href="#home"
               onClick={(e) => scrollToSection(e, '#home')}
-              className="text-2xl font-bold text-white hover:text-camel transition-colors"
+              className="text-2xl font-bold text-white hover:text-camel-light transition-colors"
             >
               Israel.
             </a>
@@ -45,7 +45,7 @@ const Footer = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-gray-400 hover:text-camel transition-colors text-sm"
+                className="text-gray-400 hover:text-camel-light transition-colors text-sm"
               >
                 {link.name}
               </a>
@@ -58,7 +58,7 @@ const Footer = () => {
               href="https://github.com/israelalalibo"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-400 hover:text-camel transition-colors"
+              className="p-2 text-gray-400 hover:text-camel-light transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
@@ -67,7 +67,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/israelalalibo/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-gray-400 hover:text-camel transition-colors"
+              className="p-2 text-gray-400 hover:text-camel-light transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
@@ -77,7 +77,7 @@ const Footer = () => {
 
         {/* Made with love */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-500 text-sm flex items-center justify-center gap-1">
+          <p className="text-gray-400 text-sm flex items-center justify-center gap-1">
             Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> using React & Tailwind CSS
           </p>
         </div>

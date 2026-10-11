@@ -169,7 +169,7 @@ const Experience = () => {
         <div className="bg-navy rounded-2xl p-8 text-white mb-8 reveal">
           <div className="flex flex-col sm:flex-row sm:items-start gap-5">
             <div className="p-3 bg-white/10 rounded-xl self-start">
-              <Sparkles className="w-6 h-6 text-camel" />
+              <Sparkles className="w-6 h-6 text-camel-light" />
             </div>
             <div className="flex-1">
               <h3 className="text-2xl font-bold">Led AI tooling adoption across the team</h3>

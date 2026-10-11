@@ -10,8 +10,11 @@ import Footer from './sections/Footer';
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <Navigation />
-      <main>
+      <main id="main" tabIndex={-1} className="outline-none">
         <Hero />
         <About />
         <Experience />

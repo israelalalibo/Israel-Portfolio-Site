@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,25 +10,25 @@
     --card-foreground: 220 14% 18%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 14% 18%;
-    --primary: 32 40% 59%;
+    --primary: 28 45% 38%;
     --primary-foreground: 0 0% 100%;
     --secondary: 212 52% 24%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 98%;
     --muted-foreground: 220 9% 46%;
-    --accent: 32 40% 59%;
+    --accent: 28 45% 38%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 32 40% 59%;
+    --ring: 28 45% 38%;
     --radius: 0.5rem;
     
     /* Custom Colors */
-    --camel: 32 40% 59%;
+    --camel: 28 45% 38%;
     --camel-light: 34 45% 66%;
-    --camel-dark: 28 35% 50%;
+    --camel-dark: 28 46% 31%;
     --navy: 212 52% 24%;
     --navy-light: 212 45% 31%;
     --navy-dark: 212 55% 18%;
@@ -52,6 +50,31 @@
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
+
+  /* Visible keyboard focus: dark camel on light surfaces, light camel on navy ones */
+  :focus-visible {
+    outline: 3px solid #8E6136;
+    outline-offset: 2px;
+  }
+
+  .bg-navy :focus-visible,
+  footer :focus-visible {
+    outline-color: #D4A77A;
+  }
+
+  .bg-navy .bg-white :focus-visible {
+    outline-color: #8E6136;
+  }
+}
+
+/* Skip link, hidden until focused */
+.skip-link {
+  @apply absolute left-4 -top-20 z-[100] bg-navy text-white font-semibold px-4 py-3 rounded-lg;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 @layer utilities {
@@ -172,12 +195,12 @@
 
 /* Button hover */
 .btn-primary {
-  @apply bg-[#C4956A] text-white font-semibold px-7 py-3.5 rounded-lg;
+  @apply bg-[#8E6136] text-white font-semibold px-7 py-3.5 rounded-lg;
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  @apply bg-[#A67B5B];
+  @apply bg-[#744D2B];
   transform: scale(1.02);
 }
 
@@ -197,7 +220,7 @@
 }
 
 .skill-tag:hover {
-  @apply bg-[#C4956A] text-white;
+  @apply bg-[#8E6136] text-white;
 }
 
 /* Reduced motion */
